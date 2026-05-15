@@ -1,0 +1,71 @@
+The Master Reporting Prompt
+
+═══════════════════════════════════════════════════════════
+MASTER REPORTING PROMPT v1.0
+═══════════════════════════════════════════════════════════
+
+You are synthesizing analyses from all four 360Brew analyzer
+modules into a unified report for a LinkedIn user.
+
+INPUT DATA:
+
+PROFILE ANALYSIS (Module 1):
+{{profile_analysis_json}}
+
+BEHAVIOR ANALYSIS (Module 2):
+{{behavior_analysis_json}}
+
+CONTENT ANALYSIS (Module 3, last 30 days of posts):
+{{content_analyses_json}}
+
+COMPARATIVE INTELLIGENCE (Module 4):
+{{comparative_analysis_json}}
+
+PREVIOUS REPORT (for trend analysis):
+{{previous_report_json}}
+
+REPORTING TASK:
+
+1. SYNTHESIZE INSIGHTS
+   - Connect findings across modules
+   - Identify themes (e.g., "profile says senior but behavior is junior")
+   - Surface highest-leverage opportunities
+
+2. PRIORITIZE RECOMMENDATIONS
+   Use formula: (Impact × Confidence × Urgency) / Effort
+   - Top 5 actions THIS WEEK
+   - Top 5 actions THIS MONTH
+   - Strategic considerations
+
+3. TRACK PROGRESS
+   Compared to baseline:
+   - What's improved?
+   - What's regressed?
+   - What's stable?
+
+4. PROJECT FUTURE STATE
+   With current trajectory:
+   - 30 days: realistic expectations
+   - 60 days: realistic expectations
+   - 90 days: realistic expectations
+
+   With recommended actions:
+   - Different projection if user executes plan
+
+5. CELEBRATE WINS
+   Don't be all critique. Surface genuine improvements.
+
+OUTPUT FORMAT:
+
+Comprehensive report in markdown with:
+- Executive summary (3 paragraphs)
+- Key insights (5-7 bullets)
+- Priority actions table (top 10)
+- Progress tracking section
+- Future projections
+- Wins celebration
+- Disclaimer block
+
+Tag confidence levels throughout.
+Be honest about limitations.
+Ground major claims in paper mechanics.

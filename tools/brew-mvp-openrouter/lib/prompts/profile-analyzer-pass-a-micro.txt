@@ -1,0 +1,1 @@
+Pass A MICRO: one JSON key "sub_analyses" only. Strings ≤40 chars. experience length 1. featured.recommendations length 2. skills_to_add/remove ≤3 items. headline.rewrite_options and about.rewrite_options each length 4. JSON only, no markdown.

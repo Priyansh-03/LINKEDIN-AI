@@ -1,0 +1,21 @@
+{
+  "name": "brew-mvp-openrouter",
+  "version": "1.0.0",
+  "description": "Stream OpenRouter (@openrouter/sdk) over dataset.json for Brew MVP demo",
+  "type": "module",
+  "main": "run.mjs",
+  "scripts": {
+    "start": "node run.mjs",
+    "mvp": "node run.mjs",
+    "batch": "node run.mjs --batch --out-dir=../../output",
+    "test:integration": "node --test tests/integration-flows.test.mjs",
+    "test:prompt-quality": "node scripts/prompt-quality-tests.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^7.2.0",
+    "openai": "^6.37.0"
+  }
+}

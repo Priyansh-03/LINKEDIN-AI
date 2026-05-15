@@ -1,0 +1,13 @@
+linkedin_extension_v2
+COMMAND.TXT
+cursor chat
+linkedin_makeover_data.json
+.env
+# Common ignores
+node_modules
+dist
+.DS_Store
+*.log
+output/
+db/
+.gemini/

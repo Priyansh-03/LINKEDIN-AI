@@ -1,0 +1,242 @@
+[
+  {
+    "id": "case-01-ai-leadership",
+    "dataset": {
+      "profile": {
+        "headline": "AI Engineering Leader | 20+ yrs | Founding Member @ Outspark",
+        "about": "I build AI products and teams for measurable business outcomes.",
+        "experienceItems": [
+          {
+            "title": "Head of AI",
+            "company": "Outspark",
+            "duration": "2020-Present",
+            "description": "Led AI productization and LLM delivery."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "AI Product Engineering",
+        "career_goal": "Growth",
+        "geography": "India",
+        "target_audience": "Product leaders",
+        "years_experience": "20+"
+      }
+    }
+  },
+  {
+    "id": "case-02-sales-leader",
+    "dataset": {
+      "profile": {
+        "headline": "Enterprise Sales Leader | B2B SaaS | Revenue Growth",
+        "about": "I help B2B SaaS teams build repeatable revenue engines.",
+        "experienceItems": [
+          {
+            "title": "VP Sales",
+            "company": "Acme SaaS",
+            "duration": "2019-Present",
+            "description": "Scaled enterprise ARR through structured outbound and enablement."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "B2B SaaS Sales",
+        "career_goal": "Both",
+        "geography": "UAE",
+        "target_audience": "Founders and CROs",
+        "years_experience": "14"
+      }
+    }
+  },
+  {
+    "id": "case-03-product-manager",
+    "dataset": {
+      "profile": {
+        "headline": "Senior Product Manager | Fintech | Growth + Risk",
+        "about": "I build financial products balancing growth and compliance.",
+        "experienceItems": [
+          {
+            "title": "Senior Product Manager",
+            "company": "FinFlow",
+            "duration": "2021-Present",
+            "description": "Owned onboarding and risk controls for digital lending."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "Fintech Product",
+        "career_goal": "Job Seeking",
+        "geography": "India",
+        "target_audience": "Hiring managers in fintech",
+        "years_experience": "9"
+      }
+    }
+  },
+  {
+    "id": "case-04-generic-headline",
+    "dataset": {
+      "profile": {
+        "headline": "Innovation Leader",
+        "about": "Passionate professional helping organizations transform.",
+        "experienceItems": [
+          {
+            "title": "Manager",
+            "company": "Global Corp",
+            "duration": "2018-Present",
+            "description": "Worked across multiple strategic initiatives."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "Digital Transformation",
+        "career_goal": "Growth",
+        "geography": "US",
+        "target_audience": "Executives",
+        "years_experience": "12"
+      }
+    }
+  },
+  {
+    "id": "case-05-creator-economy",
+    "dataset": {
+      "profile": {
+        "headline": "Creator Growth Strategist | LinkedIn + YouTube",
+        "about": "I help educators and founders grow audience and leads.",
+        "experienceItems": [
+          {
+            "title": "Growth Strategist",
+            "company": "CreatorLabs",
+            "duration": "2022-Present",
+            "description": "Designed content systems for creators."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "Creator Growth",
+        "career_goal": "Both",
+        "geography": "India",
+        "target_audience": "Founders and creators",
+        "years_experience": "7"
+      }
+    }
+  },
+  {
+    "id": "case-06-ml-engineer",
+    "dataset": {
+      "profile": {
+        "headline": "ML Engineer | Recommenders | Personalization",
+        "about": "I build recommendation systems and experimentation pipelines.",
+        "experienceItems": [
+          {
+            "title": "ML Engineer",
+            "company": "StreamAI",
+            "duration": "2020-Present",
+            "description": "Improved ranking relevance and model serving."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "ML Ranking Systems",
+        "career_goal": "Job Seeking",
+        "geography": "Germany",
+        "target_audience": "ML hiring teams",
+        "years_experience": "6"
+      }
+    }
+  },
+  {
+    "id": "case-07-founder",
+    "dataset": {
+      "profile": {
+        "headline": "Founder | B2B Workflow Automation",
+        "about": "Building workflow automation for service teams.",
+        "experienceItems": [
+          {
+            "title": "Founder",
+            "company": "FlowPilot",
+            "duration": "2023-Present",
+            "description": "Launching and iterating product with SMB customers."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "B2B Workflow SaaS",
+        "career_goal": "Growth",
+        "geography": "India",
+        "target_audience": "Operations leaders",
+        "years_experience": "10"
+      }
+    }
+  },
+  {
+    "id": "case-08-marketing",
+    "dataset": {
+      "profile": {
+        "headline": "Performance Marketing Lead | D2C",
+        "about": "Scaling profitable growth through paid and lifecycle channels.",
+        "experienceItems": [
+          {
+            "title": "Marketing Lead",
+            "company": "D2C Brands",
+            "duration": "2019-Present",
+            "description": "Managed growth across Meta, Google, retention journeys."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "D2C Growth Marketing",
+        "career_goal": "Both",
+        "geography": "UK",
+        "target_audience": "CMOs",
+        "years_experience": "11"
+      }
+    }
+  },
+  {
+    "id": "case-09-consultant",
+    "dataset": {
+      "profile": {
+        "headline": "Operations Consultant | Process Excellence",
+        "about": "I help teams improve throughput and decision quality.",
+        "experienceItems": [
+          {
+            "title": "Consultant",
+            "company": "OpsWorks",
+            "duration": "2017-Present",
+            "description": "Delivered operating model redesigns."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "Operations Excellence",
+        "career_goal": "Growth",
+        "geography": "Singapore",
+        "target_audience": "Ops leaders",
+        "years_experience": "13"
+      }
+    }
+  },
+  {
+    "id": "case-10-early-career",
+    "dataset": {
+      "profile": {
+        "headline": "Software Engineer",
+        "about": "Building backend systems and learning distributed architecture.",
+        "experienceItems": [
+          {
+            "title": "Software Engineer",
+            "company": "TechCo",
+            "duration": "2023-Present",
+            "description": "Built APIs and improved service reliability."
+          }
+        ]
+      },
+      "userContext": {
+        "declared_niche": "Backend Engineering",
+        "career_goal": "Job Seeking",
+        "geography": "India",
+        "target_audience": "Engineering managers",
+        "years_experience": "2"
+      }
+    }
+  }
+]

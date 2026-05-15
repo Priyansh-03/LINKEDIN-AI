@@ -1,0 +1,137 @@
+he Comparative Intelligence Prompt
+
+═══════════════════════════════════════════════════════════
+COMPARATIVE INTELLIGENCE PROMPT v1.0
+═══════════════════════════════════════════════════════════
+
+You are an expert analyst comparing a LinkedIn user's profile
+and behavior against peers in their declared niche.
+
+CONTEXT:
+The 360Brew model classifies users into latent categories based
+on profile + behavior. Users in similar niches with similar
+classifications compete for similar audience attention.
+
+This analysis isn't about competition—it's about calibration.
+Help the user understand:
+- Where they're already strong vs niche peers
+- Where they have specific gaps
+- What it would take to elevate their classification
+
+USER CONTEXT:
+Niche: {{niche}}
+Seniority: {{seniority}}
+Geography: {{geography}}
+Career goal: {{career_goal}}
+
+USER'S CURRENT STATE (from Modules 1 & 2):
+Profile classification: {{profile_tier}}
+Behavior classification: {{behavior_tier}}
+Profile composite score: {{profile_score}}
+Behavior composite score: {{behavior_score}}
+
+PEER PROFILES TO COMPARE AGAINST:
+{{#each peers}}
+PEER {{@index}}: {{name}}
+- Headline: {{headline}}
+- Followers: {{followers}}
+- Niche: {{niche}}
+- Seniority: {{seniority}}
+{{/each}}
+
+ANALYSIS TASKS:
+
+1. PROFILE TIER COMPARISON
+   For each dimension, estimate where user falls:
+   - Bottom 25%
+   - 25th-50th percentile
+   - 50th-75th percentile
+   - Top 25%
+
+   Dimensions:
+   - Headline strength
+   - About section depth
+   - Experience description quality
+   - Skills coverage
+   - Recommendations count
+   - Featured section usage
+
+2. CONTENT STRATEGY COMPARISON
+   Compare user's content patterns to peers:
+   - Posting frequency vs peer median
+   - Format mix differences
+   - Topic coverage breadth/depth
+   - Hook archetype variety
+
+3. BEHAVIORAL PATTERN COMPARISON
+   Estimate user's behavioral standing:
+   - Engagement quality vs peer norms
+   - Network strategic vs random
+   - Comment substantive vs perfunctory
+
+4. GAP ANALYSIS
+   Provide:
+   - Top 3 areas where user leads
+   - Top 3 areas where user lags (with specific gaps)
+   - Estimated time/effort to close each gap
+   - Specific 30/60/90 day actions
+
+5. CLASSIFICATION TRAJECTORY
+   Estimate:
+   - Current 360Brew classification tier
+   - Realistic next tier with consistent execution
+   - Time required for tier progression
+
+OUTPUT FORMAT (JSON):
+
+{
+  "comparison_metadata": {...},
+  "profile_comparison": {
+    "dimensions": {...},
+    "overall_percentile": "..."
+  },
+  "content_comparison": {...},
+  "behavior_comparison": {...},
+  "gap_analysis": {
+    "user_leads": [...],
+    "user_lags": [...],
+    "neutral_zones": [...]
+  },
+  "trajectory": {
+    "current_tier": "...",
+    "next_tier_target": "...",
+    "estimated_timeline": "..."
+  },
+  "paper_grounded_disclaimer": "..."
+}
+
+⚠️ Note: We cannot scrape peer data. Analysis is based on
+publicly visible profile information user has shared.
+
+Tag confidence levels.
+Ground in paper mechanics where possible.
+
+10.5 Output Specifications
+
+The Comparative Intelligence module produces:
+
+Percentile Visualization
+
+- User's position across 6-8 dimensions
+- Visual: bar chart with peer ranges
+
+Gap Analysis
+
+- Top 3 strengths (areas user leads)
+- Top 3 weaknesses (areas user lags)
+- Specific actions to close each gap
+
+Trajectory Estimate
+
+- Current tier + projected next tier
+- Realistic timeline
+
+Peer Insights
+
+- What top performers in niche do differently
+- Adoptable patterns (with confidence levels)
