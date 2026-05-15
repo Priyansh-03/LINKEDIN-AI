@@ -978,7 +978,8 @@ export function runContentAnalyzerFlow(dataset, profileOut, behaviorOut) {
           {
             severity: "high",
             issue:
-              "Topic track mismatch: draft reads GTM/sales-heavy while declared niche is technical ML/AI (or the opposite). Generic overlap (e.g. 'AI') is not enough.",
+              "Topic track mismatch: draft focus differs from declared niche.",
+            why_detected: `Found ${nicheAlign.postTechHits} tech/ML hits vs ${nicheAlign.postSalesHits} sales/GTM hits. Declared niche is "${truncMeta(declaredNicheRaw, 40)}" which expected different lexical weighting.`,
             fix: "Rewrite for your declared niche pillars, or update declared niche / target audience if this topic is intentional.",
           },
         ]
@@ -988,22 +989,39 @@ export function runContentAnalyzerFlow(dataset, profileOut, behaviorOut) {
           {
             severity: "high",
             issue: "Draft is strongly off-profile for declared niche.",
+            why_detected: `Coherence score (${declaredIdentityAlignment}%) is below the threshold for your profile tier (${profileTier}). Meaningful tokens like [${(meaningfulNicheTokens || []).slice(0, 3).join(", ")}] were missing or diluted.`,
             fix: "Either pivot post to your niche pillars or publish from a separate, matching profile.",
           },
         ]
       : []),
-    ...(declaredIdentityAlignment < 70
-      ? [{ severity: "high", issue: "Topic drifts from declared niche", fix: "Anchor draft to a declared pillar keyword." }]
+    ...(declaredIdentityAlignment < 70 && !nicheDraftTrackMismatch && !severeProfileMismatch
+      ? [{ 
+          severity: "high", 
+          issue: "Topic drifts from declared niche", 
+          why_detected: `Niche alignment (${declaredIdentityAlignment}%) indicates the draft uses too few keywords from your declared domain. Observed domain: ${nicheAlign.postDomain}.`,
+          fix: "Anchor draft to a declared pillar keyword." 
+        }]
       : []),
     ...(demonstratedBehaviorAlignment < 65
-      ? [{ severity: "high", issue: "Weak behavior-content alignment", fix: "Warm this topic via in-niche engagement first." }]
+      ? [{ 
+          severity: "high", 
+          issue: "Weak behavior-content alignment", 
+          why_detected: `Your recent interaction history (score: ${behaviorScore}/100) doesn't show high activity in this topic area (${nicheAlign.postDomain}).`,
+          fix: "Warm this topic via in-niche engagement first." 
+        }]
       : []),
     ...(hookAvg < 7
-      ? [{ severity: "medium", issue: "Hook strength below target", fix: "Use a stronger archetype with concrete specificity." }]
+      ? [{ 
+          severity: "medium", 
+          issue: "Hook strength below target", 
+          why_detected: `The hook dimensions (Curiosity/Specificity/Clarity/Diff) averaged ${hookAvg}/10. Archetype "${hookArchetype}" needs more concrete specificity or a stronger curiosity gap.`,
+          fix: "Use a stronger archetype with concrete specificity." 
+        }]
       : []),
     ...reachKillers.slice(0, 5).map((x) => ({
       severity: x.severity,
-      issue: x.name,
+      issue: x.name.replace(/_/g, " "),
+      why_detected: x.fix.split(".")[0], // Use first part of fix as a temporary reason
       fix: x.fix,
     })),
   ].slice(0, 5);
